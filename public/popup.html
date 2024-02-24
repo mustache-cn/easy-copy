@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html id="popup-panel">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title data-i18n="extName"></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .extension {
+      width: 362px;
+      padding: 0 16px 16px 16px;
+      background: #d0fcf1;
+    }
+
+    .header {
+      height: 60px;
+    }
+
+    .align-items-center {
+      align-items: center !important;
+    }
+
+    .w-100 {
+      width: 100% !important;
+    }
+
+    img,
+    svg {
+      vertical-align: middle;
+    }
+
+    img {
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+
+    .content {
+      padding: 16px;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 105%;
+      color: #fff;
+      background: #4beac4;
+      border-radius: 6px;
+      width: 330px;
+    }
+
+    .status-block {
+      height: 50px;
+    }
+
+    .flex-column {
+      flex-direction: column !important;
+    }
+
+    .d-flex {
+      display: flex !important;
+    }
+
+    .domain {
+      margin-bottom: 7px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    #status {
+      color: #ff4343;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    #domain {
+      color: #2c5b86;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    #switch {
+      height: 48px;
+      background: #08a0d0;
+      box-shadow: 0 4px 8px rgba(62, 63, 92, .25);
+      border-radius: 4px;
+      font-family: "Work Sans", sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: #fff;
+      border: none;
+      transition: all .2s;
+    }
+
+    #switch:hover {
+      background-color: #02b3eb;
+    }
+
+    .content.active #status {
+      color: #319a55;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="extension">
+    <div class="header w-100 d-flex align-items-center">
+      <img alt="logo" src="images/logo.svg" width="64"> <span
+        style="font-size: 22px; font-weight: 600; color: #319a55;">Easy Copy</span>
+    </div>
+    <div class="content" id="content">
+      <div class="status-block w-100 d-flex flex-column">
+        <span class="domain">Domain:&nbsp;&nbsp;
+          <span id="domain"></span>
+        </span>
+        <span>Copy Enabled:&nbsp;&nbsp;
+          <span id="status"></span>
+        </span>
+      </div>
+      <button id="switch" class="w-100">Enable extension on this website</button>
+    </div>
+  </div>
+  <script type="text/javascript" src="script/popup.js"></script>
+</body>
+
+</html>
